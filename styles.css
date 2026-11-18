@@ -1,0 +1,194 @@
+/* Theme and shared defaults */
+.profile-page {
+  --ink: #000f08;
+  --slate: #1c3738;
+  --text: #4d4847;
+  --cream: #f4fff8;
+  --steel: #8baaad;
+  --surface: #e7f5ef;
+  --line: #ccdfdc;
+  --radius: 0.75rem;
+  --padding: clamp(1.25rem, 4vw, 2rem);
+  --mono: "IBM Plex Mono", monospace;
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  background: var(--surface);
+  color: var(--text);
+  font: 1rem / 1.6 "Instrument Sans", system-ui, sans-serif;
+  overflow-wrap: anywhere;
+}
+body, .profile-page :where(h1, h2, h3, p, ul, dl, dd) {
+  margin: 0;
+}
+.profile-page, .profile-page * {
+  box-sizing: border-box;
+}
+.profile-page a {
+  color: inherit;
+  text-decoration: none;
+}
+.profile-page a:focus-visible {
+  outline: 2px solid var(--slate);
+  outline-offset: 3px;
+}
+.profile-page a:hover {
+  box-shadow: inset 0 0 0 2px var(--steel);
+}
+
+/* Card and identity */
+.profile-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  max-width: 56rem;
+  margin: auto;
+  border-radius: 1.5rem;
+  background: var(--cream);
+  box-shadow: 0 8px 24px #000f0814;
+}
+.profile-page .banner {
+  grid-column: 1 / -1;
+  min-height: 8rem;
+  padding: 1rem var(--padding);
+  border-radius: 1.5rem 1.5rem 0 0;
+  background: linear-gradient(155deg, var(--slate), var(--ink));
+  color: var(--cream);
+  text-align: right;
+}
+.profile-page .identity, .profile-page .content {
+  min-width: 0;
+  padding: var(--padding);
+}
+.profile-page .identity {
+  padding-top: 0;
+  border-right: 1px solid var(--line);
+}
+.profile-page .avatar {
+  position: relative;
+  width: 7.5rem;
+  height: 7.5rem;
+  margin: -3.75rem 0 1rem;
+  overflow: hidden;
+  border: 4px solid var(--cream);
+  border-radius: var(--radius);
+  background: var(--line);
+}
+.profile-page .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-page img:not([src]), .profile-page img[src=""], .profile-page .navigation {
+  display: none;
+}
+.profile-page h1 {
+  color: var(--ink);
+  font-size: 1.75rem;
+  line-height: 1.25;
+}
+.profile-page .stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.profile-page .stats > div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.profile-page dd {
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 650;
+}
+.profile-page .contact, .profile-page .socials a {
+  display: block;
+  min-height: 2.75rem;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  background: var(--cream);
+}
+.profile-page .contact {
+  background: var(--ink);
+  color: var(--cream);
+  text-align: center;
+}
+
+/* Content, badges and social links */
+.profile-page section + section {
+  margin-top: 2rem;
+}
+.profile-page h2 {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  scroll-margin-top: 1.5rem;
+}
+.profile-page h3 {
+  margin: 0.75rem 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.profile-page .badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+.profile-page .badges li {
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.profile-page .badges li, .profile-page small {
+  font: 0.75rem / 1.5 var(--mono);
+}
+.profile-page .socials {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+.profile-page .socials a {
+  border: 1px solid var(--line);
+}
+.profile-page small {
+  display: block;
+}
+.profile-page .updated {
+  padding: 1.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+/* Mobile keeps the edge-to-edge, stacked layout */
+@media (max-width: 47.5rem) {
+  .profile-page {
+    padding: 0;
+  }
+  .profile-card {
+    grid-template-columns: minmax(0, 1fr);
+    background: var(--surface);
+    box-shadow: none;
+  }
+  .profile-page .banner {
+    border-radius: 0;
+  }
+  .profile-page .identity {
+    border-right: 0;
+  }
+  .profile-page .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 var(--padding);
+    border-bottom: 1px solid var(--line);
+  }
+  .profile-page .navigation a {
+    padding: 1rem 0;
+  }
+}
+@media (max-width: 32rem) {
+  .profile-page .socials {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

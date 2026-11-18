@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>John Smith | Developer Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Instrument+Sans:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="profile-page">
+        <article class="profile-card" aria-labelledby="profile-name">
+            <p class="banner">Profile</p>
+            <header class="identity">
+                <div class="avatar">
+                    <!-- Add src="images/profile.jpg" and update the alt text. -->
+                    <img alt="Picture of John Smith" width="112" height="112">
+                </div>
+                <h1 id="profile-name">John Smith</h1>
+                <p>Frontend Developer</p>
+                <p>City, State · Open to work</p>
+
+                <!-- Replace sample statistics with your props. -->
+                <dl class="stats">
+                    <div>
+                        <dt>Years</dt>
+                        <dd>#</dd>
+                    </div>
+                    <div>
+                        <dt>Repos</dt>
+                        <dd>#</dd>
+                    </div>
+                    <div>
+                        <dt>Projects</dt>
+                        <dd>#</dd>
+                    </div>
+                </dl>
+                <span class="contact">Email</span>
+            </header>
+
+            <nav class="navigation" aria-label="Profile sections">
+                <a href="#profile-about">About</a>
+                <a href="#profile-skills">Skills</a>
+                <a href="#profile-socials">Links</a>
+            </nav>
+
+            <div class="content">
+                <section>
+                    <h2 id="profile-about">About</h2>
+                    <p>
+                        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 id="profile-skills">Skills</h2>
+                    <h3>Languages</h3>
+                    <ul class="badges">
+                        <li>TypeScript</li>
+                        <li>JavaScript</li>
+                        <li>Rust</li>
+                        <li>CSS</li>
+                    </ul>
+                    <h3>Frameworks</h3>
+                    <ul class="badges">
+                        <li>React</li>
+                        <li>Next.js</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                    <h3>Tools</h3>
+                    <ul class="badges">
+                        <li>Figma</li>
+                        <li>Storybook</li>
+                        <li>Playwright</li>
+                        <li>Git</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 id="profile-socials">Find me</h2>
+                    <!-- Replace the example URLs and handles. -->
+                    <div class="socials">
+                        <a href="https://example.com/github">
+                            <i class="fa-brands fa-github fa-fw" aria-hidden="true"></i>
+                            GitHub <small>@your-handle</small>
+                        </a>
+                        <a href="https://example.com/linkedin">
+                            <i class="fa-brands fa-linkedin fa-fw" aria-hidden="true"></i>
+                            LinkedIn <small>in/your-handle</small>
+                        </a>
+                        <a href="https://example.com/x">
+                            <i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i>
+                            X <small>@your-handle</small>
+                        </a>
+                        <a href="https://example.com/">
+                            <i class="fa-solid fa-globe fa-fw" aria-hidden="true"></i>
+                            Website <small>example.com</small>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </article>
+
+    </main>
+</body>
+
+</html>
